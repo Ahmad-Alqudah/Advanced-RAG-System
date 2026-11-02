@@ -1,0 +1,29 @@
+services:
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    ports:
+      - "8002:8001"
+    environment:
+      OLLAMA_URL: "http://host.docker.internal:11434"
+      HF_HOME: "/models/huggingface"
+    volumes:
+      - huggingface_cache:/models/huggingface
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "8502:8501"
+    environment:
+      API_URL: "http://api:8001"
+    depends_on:
+      - api
+    restart: unless-stopped
+
+volumes:
+  huggingface_cache:

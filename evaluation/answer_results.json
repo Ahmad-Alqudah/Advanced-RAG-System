@@ -1,0 +1,215 @@
+{
+  "evaluated_at": "2026-11-01T18:56:23.836621+00:00",
+  "summary": {
+    "total_questions": 6,
+    "answerable_questions": 4,
+    "unanswerable_questions": 2,
+    "fact_check_pass_rate": 1.0,
+    "abstention_accuracy": 1.0,
+    "overall_behavior_pass_rate": 1.0
+  },
+  "results": [
+    {
+      "id": "Q01",
+      "question": "What does SEC-204 mean?",
+      "answerable": true,
+      "answer": "SEC-204 is a security incident code used to identify unauthorized account access.",
+      "expected_facts": [
+        [
+          "SEC-204"
+        ],
+        [
+          "unauthorized",
+          "account",
+          "access"
+        ]
+      ],
+      "fact_coverage": 1.0,
+      "correct_behavior": true,
+      "expected_source_found": true,
+      "abstained": false,
+      "evidence": [
+        {
+          "source": "security_policy.txt",
+          "text": "All employees must enable multi-factor authentication (MFA).\nSecurity incident code SEC-204 identifies unauthorized account access.",
+          "rerank_score": 5.366869926452637
+        },
+        {
+          "source": "technical_support.txt",
+          "text": "Ticket priority P2 indicates major functionality degradation.",
+          "rerank_score": -10.360109329223633
+        },
+        {
+          "source": "project_atlas.txt",
+          "text": "The planned completion date is December 15, 2026.",
+          "rerank_score": -10.969560623168945
+        }
+      ]
+    },
+    {
+      "id": "Q02",
+      "question": "Who manages Project Atlas?",
+      "answerable": true,
+      "answer": "Project Atlas is managed by David Wilson.",
+      "expected_facts": [
+        [
+          "David Wilson"
+        ]
+      ],
+      "fact_coverage": 1.0,
+      "correct_behavior": true,
+      "expected_source_found": true,
+      "abstained": false,
+      "evidence": [
+        {
+          "source": "project_atlas.txt",
+          "text": "Project code ATL-908 belongs to Project Atlas.\nThe project manager is David Wilson.\nProject Atlas focuses on cloud infrastructure modernization.\nThe approved project budget is 500000 USD.",
+          "rerank_score": 8.117288589477539
+        },
+        {
+          "source": "project_atlas.txt",
+          "text": "The planned completion date is December 15, 2026.",
+          "rerank_score": 0.1428053230047226
+        },
+        {
+          "source": "project_orion.txt",
+          "text": "Project code ORN-317 belongs to Project Orion.\nThe project manager is Sarah Johnson.\nProject Orion develops an AI-powered customer support platform.\nThe approved project budget is 750000 USD.",
+          "rerank_score": -1.711733102798462
+        }
+      ]
+    },
+    {
+      "id": "Q03",
+      "question": "What does P1 indicate?",
+      "answerable": true,
+      "answer": "P1 indicates a production outage.",
+      "expected_facts": [
+        [
+          "P1"
+        ],
+        [
+          "production",
+          "outage"
+        ]
+      ],
+      "fact_coverage": 1.0,
+      "correct_behavior": true,
+      "expected_source_found": true,
+      "abstained": false,
+      "evidence": [
+        {
+          "source": "technical_support.txt",
+          "text": "Technical support operates Sunday through Thursday.\nStandard support hours are 9 AM to 6 PM.\nCritical incidents receive immediate escalation.\nTicket priority P1 indicates a production outage.",
+          "rerank_score": 3.9553818702697754
+        },
+        {
+          "source": "technical_support.txt",
+          "text": "Ticket priority P2 indicates major functionality degradation.",
+          "rerank_score": -1.701317548751831
+        },
+        {
+          "source": "security_policy.txt",
+          "text": "All employees must enable multi-factor authentication (MFA).\nSecurity incident code SEC-204 identifies unauthorized account access.",
+          "rerank_score": -10.179716110229492
+        }
+      ]
+    },
+    {
+      "id": "Q04",
+      "question": "Can employees work from home?",
+      "answerable": true,
+      "answer": "Yes, employees can work from home. According to the provided documents, remote work is permitted up to two days per week with manager approval.",
+      "expected_facts": [
+        [
+          "remote work",
+          "work from home"
+        ],
+        [
+          "two days",
+          "2 days"
+        ],
+        [
+          "manager approval",
+          "manager's approval"
+        ]
+      ],
+      "fact_coverage": 1.0,
+      "correct_behavior": true,
+      "expected_source_found": true,
+      "abstained": false,
+      "evidence": [
+        {
+          "source": "employee_policy.txt",
+          "text": "Unused annual leave may be carried forward up to seven days into the next year.\nRemote work is permitted up to two days per week with manager approval.",
+          "rerank_score": -7.742282867431641
+        },
+        {
+          "source": "employee_policy.txt",
+          "text": "Full-time employees receive 21 days of paid annual leave each year.\nEmployees must request annual leave through the HR portal at least five working days in advance.",
+          "rerank_score": -8.785799026489258
+        },
+        {
+          "source": "security_policy.txt",
+          "text": "All employees must enable multi-factor authentication (MFA).\nSecurity incident code SEC-204 identifies unauthorized account access.",
+          "rerank_score": -10.725046157836914
+        }
+      ]
+    },
+    {
+      "id": "Q05",
+      "question": "Who is the CEO of NovaTech?",
+      "answerable": false,
+      "answer": "I cannot find the answer in the provided documents.",
+      "expected_facts": [],
+      "fact_coverage": null,
+      "correct_behavior": true,
+      "expected_source_found": null,
+      "abstained": true,
+      "evidence": [
+        {
+          "source": "employee_policy.txt",
+          "text": "Full-time employees receive 21 days of paid annual leave each year.\nEmployees must request annual leave through the HR portal at least five working days in advance.",
+          "rerank_score": -1.9087271690368652
+        },
+        {
+          "source": "employee_policy.txt",
+          "text": "Unused annual leave may be carried forward up to seven days into the next year.\nRemote work is permitted up to two days per week with manager approval.",
+          "rerank_score": -2.3472304344177246
+        },
+        {
+          "source": "deployment_guide.txt",
+          "text": "Failed deployments must be rolled back to the last stable release.\nAll production deployments require approval from the engineering lead.",
+          "rerank_score": -3.655606269836426
+        }
+      ]
+    },
+    {
+      "id": "Q06",
+      "question": "What is NovaTech's stock price?",
+      "answerable": false,
+      "answer": "I cannot find the answer in the provided documents.",
+      "expected_facts": [],
+      "fact_coverage": null,
+      "correct_behavior": true,
+      "expected_source_found": null,
+      "abstained": true,
+      "evidence": [
+        {
+          "source": "security_policy.txt",
+          "text": "All employees must enable multi-factor authentication (MFA).\nSecurity incident code SEC-204 identifies unauthorized account access.",
+          "rerank_score": -5.6940202713012695
+        },
+        {
+          "source": "employee_policy.txt",
+          "text": "Full-time employees receive 21 days of paid annual leave each year.\nEmployees must request annual leave through the HR portal at least five working days in advance.",
+          "rerank_score": -6.319380760192871
+        },
+        {
+          "source": "technical_support.txt",
+          "text": "Ticket priority P2 indicates major functionality degradation.",
+          "rerank_score": -6.328009605407715
+        }
+      ]
+    }
+  ]
+}
